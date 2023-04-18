@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text-level semantics</title>
+</head>
+
+<body>
+  <!-- HTML 요소 내에서 텍스트로 취급되는 요소 -->
+  <!-- 텍스트 사이에서 텍스트로 취급되는 요소 -->
+
+
+  <!-- 
+
+    a 요소: HTML 내에서 하이퍼텍스트 (링크) 를 생성할 때 사용하는 요소 
+  
+  -->
+  <a href="https://www.naver.com">네이버</a>
+
+  <!-- href 속성은 필수값은 아니다. -->
+  <!-- 활성화 / 비활성화 상태 -->
+  <a>네이버</a>
+
+  <!-- a 요소 내부에는 다른 a 요소를 삽입할 수 없다. -->
+  <!-- 인터렉티브 콘텐츠 내에는 다른 인터렉티브 콘텐츠를 넣어서는 안된다. -->
+  <!-- HTML 5부터 콘텐츠 모델이 바뀌었기 때문에 표준에서 a 요소 내부에 block 요소를 넣을 수 있습니다 -->
+  <div>
+    <a href="https://www.google.com">
+      <h1>Google</h1>
+      <p>세계 1위 검색 포털이다.</p>
+    </a>
+    <button type="button">선호하는 URL에 추가</button>
+  </div>
+
+  <!-- a 요소 - hash link -->
+  <nav>
+    <a href="#html-em">HTML em 요소</a>
+    <a href="#html-strong">HTML strong 요소</a>
+  </nav>
+  <h2 class="html-em">HTML em 요소</h2>
+  <h2 class="html-strong">HTML strong 요소</h2>
+
+  <!-- A 요소에 download 속성을 이용해 리소스를 다운로드 받게 할 수 있습니다. -->
+  <a href="/downloadable-data.png" download>이미지 다운로드</a>
+
+
+  <!-- 
+
+    em, strong 요소 : 강조
+    - em 은 보편적인 강조
+    - strong 은 조금 더 강한 강조 - warning, attention, required
+
+   -->
+  <strong>주의하세요!</strong>
+  <h1>Chapter 1. <strong>Hello world</strong></h1>
+
+  <p><em>감자</em>는 맛있습니다.</p>
+
+
+  <!-- 
+
+    q, cite 요소
+    - q: 문장을 인용해올 때 사용하는 요소
+    - cite: 실체가 있는 물건이나 사이트 등을 인용해올 때
+      - 출처에 가깝다. 
+
+   -->
+  <p>
+    <q>HTML은 굉장히 쉽습니다</q> 라고 <cite>조은</cite>님이 말하였습니다.
+  </p>
+
+  <blockquote>
+    <p>HTML은 굉장히 쉽습니다</p>
+    <cite>조은</cite>
+  </blockquote>
+
+
+  <!-- 
+
+    dfn, abbr 요소
+    - dfn: 해당 페이지에서 최초로 정의된 용어를 나타낼 때 사용하는 요소
+      - 전문 용어 등 쉽게 인지하기 어려운 용어를 정의할 때 사용합니다.
+    - abbr: 약어를 나타내는 요소
+      - title 속성을 사용해 전체 명칭을 작성해줍니다.  
+
+   -->
+  <p>
+    <dfn><abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr></dfn>는 웹 표준화 기구입니다.
+  </p>
+
+
+  <!-- 
+
+    code 요소
+    - HTML 문서 내에서 코드를 나타낼 때 사용하는 요소
+
+   -->
+  <p>HTML 의 DOCTYPE 에는 <code>&lt;!DOCTYPE HTML&gt;</code> 같은 것들이 있다.</p>
+
+
+  <!-- 
+
+    span 요소
+    - 별다른 의미는 없지만, 여러개의 텍스트를 감싸야할 때 사용하는 요소
+    - div 와 마찬가지로 최후의 수단으로 활용
+
+   -->
+  <span>텍스트</span>
+
+  <!-- 
+
+    br, wbr 요소
+    - break
+    - HTML 문서 내에서 줄바꿈을 일으킬 때 사용
+    - wbr 요소는 특정한 조건에서만 줄바꿈이 발생
+      - 한줄로 보이던 콘텐츠를 특정한 케이스에만 두줄로 보이게 하고싶을 때 유용합니다.
+      - CSS에서 word-break: keep-all 과 비슷한 동작입니다.
+
+   -->
+
+  <!-- 이 코드는 언제나 두 줄로 노출됩니다 -->
+  <p>
+    대신 귀여운 고양이를<br>
+    드리겠습니다.
+  </p>
+
+  <!-- 이 코드는 P 요소의 너비가 텍스트 전체를 한줄로 보여주지 못할 때만 두 줄로 보여줍니다 -->
+  <p>대신 귀여운 고양이를<wbr>드리겠습니다.</p>
+
+</body>
+
+</html>
