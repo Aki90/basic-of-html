@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grouping Content</title>
+</head>
+
+<body>
+  <!-- 무언가를 Grouping 하는 목적 _ 비슷한 의미를 가진 콘텐츠를 묶을 때 사용 -->
+
+  <!-- Paragraph 요소: 문장을 의미 -->
+  <article>
+    <h1>HTML Grouping Content</h1>
+    <p>HTML 의 P 요소는 Paragraph 를 나타내는 요소이다.</p>
+  </article>
+
+  <!-- Blockquote 요소: 인용 블록를 의미 -->
+  <blockquote>
+    <p>HTML은 문서를 표현하기 위해 만들어진 언어이지만, 현재는 웹 애플리케이션으로도 활용됩니다.</p>
+    <cite>MDN</cite>
+  </blockquote>
+
+
+  <!-- ol, ul, li 요소 -->
+  <!-- li: list item -->
+  <!-- ol, ul 요소의 자식요소는 항상 li 요소여야 한다. -->
+
+  <!-- ol: ordered list, 순서 있는 목록 -->
+  <!-- 주로 레시피, 사용설명서 등 순서에 따라 나타내야하는 목록을 나타낼 때 사용 -->
+  <h1>HTML 강의 커리큘럼</h1>
+  <ol>
+    <li>HTML Grouping Content</li>
+    <li>HTML Text-level semantics</li>
+  </ol>
+
+  <!-- ul: unordered list, 순서 없는 목록 -->
+  <!-- 네비게이션 메뉴, 버튼 메뉴 등 같은 의미를 가진 목록을 나타낼 때 사용 -->
+  <h1>HTML의 요소들</h1>
+  <ul>
+    <li>html</li>
+    <li>body</li>
+  </ul>
+
+
+  <!-- dl, dt, dd 요소 -->
+  <!-- dl: definition list -->
+  <!-- dt: definition title, dd: definition description -->
+  <!-- KEY : VALUE 구조라고 생각하시면 더 이해가 쉽습니다. -->
+  <!-- dl 요소 내에서 특정 요소들을 그룹해야 하는 경우에 한하여 div 요소를 활용 (css 위한 grouping) -->
+  <dl>
+    <div>
+      <dt>마늘</dt>
+      <dd>알싸한 맛이 나는 채소이다.</dd>
+      <dd>한국인들이 많이 찾는 채소 중 하나다.</dd>
+    </div>
+
+    <div>
+      <dt>상추</dt>
+      <dd>고기를 먹을때 많이 찾는 채소이다.</dd>
+    </div>
+  </dl>
+
+
+  <!-- figure, figcaption 요소 -->
+  <!-- figure 요소는 컨텐츠의 부연설명을 하는 컨텐츠를 다룰때 사용 -->
+  <!-- figcaption 요소는 컨텐츠의 부연설명을 하는 컨텐츠를 작성하는 요소 -->
+  <!-- ASIDE 요소는 '연관되어있지만 독립된 콘텐츠'를 의미했다면, FIGURE 요소는 '연관된 콘텐츠' 자체를 의미합니다 -->
+  <!-- 이미지, 동영상, 오디오 등을 활용한 부연설명에 많이 사용됩니다. -->
+  <article>
+    <h1>김치</h1>
+    <p>김치는 절인 채소를 각종 양념에 버무린 뒤 숙성시킨 요리입니다.</p>
+    <p>주로 사용되는 채소는 배추, 무 등이 있으며, 사용된 채소에 따라 명칭을 달리 하기도 합니다.</p>
+    <figure>
+      <img src="kimche.jpg" alt="">
+      <figcaption>Figure 1. 고춧가루 양념이 된 배추김치</figcaption>
+    </figure>
+  </article>
+
+
+  <!-- main 요소 -->
+  <!-- 해당 애플리케이션이나 페이지에서 가장 중요한 컨텐츠를 담는 컨테이너 -->
+  <!-- 한 페이지 내에서 한번만 사용 가능 -->
+  <main>
+    <!-- 메인 컨텐츠 -->
+  </main>
+
+  <!-- HTML 속성 중 hidden 을 사용하여 감추는 경우에는 여러개를 사용할 수도 있습니다 -->
+  <!-- JavaScript를 활용해 Router를 제어하는 경우 유용하게 사용할 수 있습니다. -->
+  <!-- * 활성화 되어있는 main 요소는, 언제나 하나만 존재해야 한다. -->
+  <main>
+    <h1>HOME</h1>
+  </main>
+
+  <main hidden>
+    <h1>About</h1>
+  </main>
+
+
+  <!-- div 요소 -->
+  <!-- div 요소는 의미 없이 CSS 등의 목적으로 여러 요소를 grouping 할때 사용 -->
+
+  <!-- HTML Living Standard 에서는 가장 마지막 수단으로 쓰라고 합니다. -->
+  <!-- 다른 요소가 충분히 DIV 역할을 수행할 수 있다면 해당 요소를 사용합니다. -->
+  <!-- IE 지원을 위해서 사용하는 경우가 있습니다. -->
+  <!-- 다른 요소로 대체 가능할 지 만드시 체크한 후 사용하세요. -->
+  <div lang="en-US" class="en">
+    <!-- 어떤 요소가 English일 때 그루핑 -->
+  </div>
+
+</body>
+
+
+</html>
