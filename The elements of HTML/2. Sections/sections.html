@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sections</title>
+</head>
+
+<body>
+  <!-- body 요소는 컨텐츠를 담는 HTML 요소 -->
+  <!-- body 요소 내부가 컨텐츠 대부분 차지 - 용량, 시맨틱 신경 -->
+
+  <!-- heading 요소: 제목 -->
+  <!-- h1 ~ h6 -->
+  <!-- h1: 가장 중요한 제목, h6: 가장 덜 중요한 제목 -->
+  <!-- heading 요소를 사용하면 제목을 포함하는 익명영역(anonymous section) -->
+  <!-- heading 요소에 따라 컨텐츠 다루는 영역이 달라진다. -->
+  <!-- heading 요소를 잘 활용하면, 페이지 전체의 outline (구조) 을 그리는데 용이. -->
+
+  <h1>HTML Section 요소</h1>
+  <p>이 HTML 문서는 Sections 컨텐츠를 설명하기 위한 문서입니다.</p>
+
+  <h2>HTML Section 요소</h2>
+  <p>상위 h1 의 하위 영역.</p>
+
+  <h2>HTML Section 요소</h2>
+  <p>상위 h1 의 하위 영역.</p>
+
+
+  <!-- article & section 요소 -->
+  <!-- 컨텐츠의 `독립성` -->
+  <!-- article 요소는 컨텐츠가 독립적일 때 사용 (독립적) -->
+  <!-- section 요소는 컨텐츠가 다른 컨텐츠와 연관이 있을 때 사용 (범용적) -->
+  <!-- article & section 요소는 heading 요소와 함께 사용하는 걸 강력하게 권장. -->
+  <!-- div 는 정말 최후의 수단으로 활용 권장 -->
+
+  <!-- Heading 요소 관련 MDN : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements -->
+  <article>
+    <h1>HTML Section 요소</h1>
+    <p>이 HTML 문서는 Sections 컨텐츠를 설명하기 위한 문서입니다.</p>
+
+    <section>
+      <h2>HTML Section 요소</h2>
+      <p>상위 h1 의 하위 영역.</p>
+    </section>
+
+    <section>
+      <h2>HTML Section 요소</h2>
+      <p>상위 h1 의 하위 영역.</p>
+    </section>
+  </article>
+
+
+  <!-- header, hgroup -->
+  <!-- header: 특정한 컨텐츠 시작부분을 나타내는 요소 -->
+  <!-- hgroup: heading 요소를 그룹화하여 제목-부제목 관계를 만드는 요소 -->
+  <article>
+    <header>
+      <hgroup>
+        <!-- hgroup 내부에서 계층구조를 가지게 되지만 -->
+        <!-- hgroup 외부에서는 가장 높은 계급의 h1 계층만 가져가게 된다. -->
+        <!-- hgroup 활용으로, 가장 높은 계급의 요소에 대해서만 제목으로 쓰게 만들 수 있다. -->
+        <h1>HTML Section 요소</h1>
+        <h2>누구나 쉽게 배우는</h2>
+      </hgroup>
+      <p>이 HTML 문서는 Sections 컨텐츠를 설명하기 위한 문서입니다.</p>
+    </header>
+
+    <section>
+      <h2>HTML Section 요소</h2>
+      <p>상위 h1 의 하위 영역.</p>
+    </section>
+
+    <section>
+      <h2>HTML Section 요소</h2>
+      <p>상위 h1 의 하위 영역.</p>
+    </section>
+  </article>
+
+  <!-- footer & adress 요소 -->
+  <footer>
+    <!-- 컨텐츠의 마무리 -->
+    <!-- copyright, 작성자 정보, 작성일 -->
+
+    <!-- address 요소: contact infomation -->
+    <address>
+      <p>작성자: sehun</p>
+      <p>서울시 강남구 ...</p>
+    </address>
+    <!-- public infomation -->
+    <p>
+      <time>2023.04.19</time>
+    </p>
+  </footer>
+
+
+  <!-- nav 요소:페이지 네비게이션 컨텐츠를 담는 요소 -->
+  <article>
+    <nav>
+      <a href="#html-section">HTML Section 요소</a>
+      <a href="#html-article">HTML Article 요소</a>
+    </nav>
+    <header>
+      <hgroup id="html-section">
+        <!-- hgroup 내부에서 계층구조를 가지게 되지만 -->
+        <!-- hgroup 외부에서는 가장 높은 계급의 h1 계층만 가져가게 된다. -->
+        <!-- hgroup 활용으로, 가장 높은 계급의 요소에 대해서만 제목으로 쓰게 만들 수 있다. -->
+        <h1>HTML Section 요소</h1>
+        <h2>누구나 쉽게 배우는</h2>
+      </hgroup>
+      <p>이 HTML 문서는 Sections 컨텐츠를 설명하기 위한 문서입니다.</p>
+    </header>
+
+    <section id="html-article">
+      <h2>HTML Section 요소</h2>
+      <p>상위 h1 의 하위 영역.</p>
+    </section>
+
+    <section>
+      <h2>HTML Section 요소</h2>
+      <p>상위 h1 의 하위 영역.</p>
+    </section>
+  </article>
+
+
+  <!-- aside 요소: 페이지 콘텐츠와 연관성은 있지만, 해당 콘텐츠와는 별개로 간주될 수 있는 콘텐츠 -->
+  <!-- 컨텐츠 추천, 광고 -->
+  <aside>
+    <iframe src="ad.html"></iframe>
+  </aside>
+</body>
+
+</html>
