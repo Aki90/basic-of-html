@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive content</title>
+</head>
+
+<body>
+  <!-- 
+
+  Interactive content
+    - 기존에는 JavaScript를 활용해 구현해야했던 컴포넌트를 HTML 기본 요소로 제공하는 요소들입니다.
+    - 비교적 최신 스펙이 많아 브라우저가 지원하지 않는 경우가 많기 때문에 브라우저 지원율을 꼭 살펴보아야합니다.
+
+  -->
+
+
+  <!-- details, summary - 아코디언 형태의 UI -->
+  <!-- caniuse.com -->
+  <style>
+    details>summary {
+      transition: all 0.2s;
+    }
+  </style>
+
+  <details>
+    <!-- <details on> -->
+    <summary>Loading...</summary>
+    <p>이미지 다운로드 중...</p>
+    <p>사운드 다운로드 완료</p>
+  </details>
+
+  <!-- dialog -->
+  <button id="dialog-button" type="button">Dialog 열기</button>
+  <dialog>
+    <h1>Add to Cart</h1>
+    <p>주문하신 상품은 이것이 맞습니까?</p>
+  </dialog>
+
+  <script>
+    const button = document.querySelector('#dialog-button');
+    const dialog = document.querySelector('dialog');
+
+    button.addEventListener('click', (e) => {
+      dialog.showModal();
+    });
+  </script>
+</body>
+
+</html>
